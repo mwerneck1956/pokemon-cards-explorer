@@ -1,0 +1,21 @@
+.pokemon-card-container {
+  width: 500px;
+
+  &__name {
+    color: $color-primary;
+  }
+
+  &__caption {
+    font-size: $font-size-text-small;
+
+    color: $gray-400;
+  }
+
+  &__type {
+    color: green;
+
+    &.lightning {
+      background: yellow;
+    }
+  }
+}
