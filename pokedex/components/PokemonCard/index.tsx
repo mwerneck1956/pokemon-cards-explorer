@@ -1,38 +1,46 @@
+/* eslint-disable @next/next/no-img-element */
+import { ReactNode } from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
+
 import { PokemonCardProps } from "./PokemonCard.interfaces";
 
 export function PokemonCard(props: PokemonCardProps) {
   const { id, images, name, types } = props;
 
-  const renderPokemonTypes = () => (
-    <>
+  const renderPokemonTypes = (): ReactNode => (
+    <ul
+      aria-label="pokemon-types"
+      className={styles["pokemon-card-container__description__types"]}
+    >
       {types.map((type) => (
-        <span
-          className={`${
-            styles["pokemon-card-container__type"]
-          }  ${type.toLowerCase()}`}
-          key={type}
-        >
+        <li key={type} className={`pokemon-card ${type.toLowerCase()}`}>
           {type}
-        </span>
+        </li>
       ))}
-    </>
+    </ul>
   );
 
   return (
-    <li className={styles["pokemon-card-container"]}>
-      <h3 className={styles["pokemon-card-container__name"]}>{name}</h3>
-      <img
-        className="pokemon-card-container__img"
-        src={images.small}
-        loading="lazy"
-        alt={name}
-      />
-      <figcaption className={styles["pokemon-card-container__caption"]}>
-        {id}
-      </figcaption>
+    <li
+      className={styles["pokemon-card-container"]}
+      aria-label={`${name}-card`}
+    >
+      <div className={styles["pokemon-card-container__img-container"]}>
+        <img src={images.small} loading="lazy" alt={name} />
+      </div>
 
-      {renderPokemonTypes()}
+      <div className={styles["pokemon-card-container__description"]}>
+        <small className={styles["pokemon-card-container__description__id"]}>
+          {id}
+        </small>
+
+        <h3 className={styles["pokemon-card-container__description__name"]}>
+          {name}
+        </h3>
+
+        {renderPokemonTypes()}
+      </div>
     </li>
   );
 }

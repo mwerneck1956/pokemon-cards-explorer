@@ -1,7 +1,7 @@
 export const pokemonDataMock = {
   id: "pl1-1",
   name: "Ampharos",
-  types: ["Lightning"],
+  types: ["Lightning", "fire"],
   abilities: [
     {
       name: "Damage Bind",

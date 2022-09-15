@@ -25,6 +25,10 @@ button {
   border: none;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -33,7 +37,8 @@ button {
 }
 
 .container {
-  width: 750px;
+  width: 90vw;
+  max-width: 90vw;
 }
 
 @media (max-width: 1080px) {
@@ -52,4 +57,34 @@ button {
   .container {
     width: 1170px;
   }
+}
+
+.pokemon-card {
+  background: $gray-400;
+  color: $white-0;
+}
+
+.lightning {
+  background: $yellow-eletric;
+  color: $color-primary;
+}
+
+.fire {
+  background: $orange-fire;
+  color: $white-0;
+}
+
+.grass {
+  background: $green-grass;
+  color: $white-0;
+}
+
+.poison {
+  background: $purple-poison;
+  color: $white-0;
+}
+
+.water {
+  background: $blue-water;
+  color: $white-0;
 }

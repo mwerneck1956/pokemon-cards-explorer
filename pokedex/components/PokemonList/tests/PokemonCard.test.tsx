@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { pokemonDataMock } from "../../../mocks";
-import PokemonCard from "../index";
+import PokemonList from "../index";
 
 describe("Pokemon Card tests", () => {
   beforeEach(() => {
-    render(<PokemonCard {...pokemonDataMock} />);
+    render(<PokemonList {...pokemonDataMock} />);
   });
 
   it("Renders the pokemon name and id", () => {
