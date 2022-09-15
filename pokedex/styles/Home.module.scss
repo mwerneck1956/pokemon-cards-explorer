@@ -1,0 +1,7 @@
+.h1Container {
+  color: blue;
+
+  @include mobile {
+    color: black;
+  }
+}
