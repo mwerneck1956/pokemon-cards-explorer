@@ -7,5 +7,5 @@ export default function PokemonDetails() {
   const router = useRouter();
   const { pokemon } = router.query;
 
-  return <div></div>;
+  return <div>{pokemon}</div>;
 }

@@ -22,26 +22,28 @@ export function PokemonCard(props: PokemonCardProps) {
   );
 
   return (
-    <li
-      className={styles["pokemon-card-container"]}
-      aria-label={`${name}-card`}
-    >
-      <div className={styles["pokemon-card-container__img-container"]}>
-        <img src={images.small} loading="lazy" alt={name} />
-      </div>
+    <Link href={`pokemonDetails/${id}`}>
+      <li
+        className={styles["pokemon-card-container"]}
+        aria-label={`${name}-card`}
+      >
+        <div className={styles["pokemon-card-container__img-container"]}>
+          <img src={images.small} loading="lazy" alt={name} />
+        </div>
 
-      <div className={styles["pokemon-card-container__description"]}>
-        <small className={styles["pokemon-card-container__description__id"]}>
-          {id}
-        </small>
+        <div className={styles["pokemon-card-container__description"]}>
+          <small className={styles["pokemon-card-container__description__id"]}>
+            {id}
+          </small>
 
-        <h3 className={styles["pokemon-card-container__description__name"]}>
-          {name}
-        </h3>
+          <h3 className={styles["pokemon-card-container__description__name"]}>
+            {name}
+          </h3>
 
-        {renderPokemonTypes()}
-      </div>
-    </li>
+          {renderPokemonTypes()}
+        </div>
+      </li>
+    </Link>
   );
 }
 
