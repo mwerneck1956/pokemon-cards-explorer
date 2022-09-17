@@ -6,7 +6,7 @@ export interface IFetchPokemonParams {
   page?: number;
   pageSize?: number;
 }
-interface IFetchPokemonsResponse {
+export interface IFetchPokemonsResponse {
   count: number;
   page: number;
   pageSize: number;

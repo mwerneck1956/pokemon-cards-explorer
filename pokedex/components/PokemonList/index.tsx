@@ -8,7 +8,7 @@ import PokemonCard from "../PokemonCard";
 import styles from "./styles.module.scss";
 
 export function PokemonList() {
-  const { getPokemons, isLoading, pokemonCards } =
+  const { getPokemons, isLoading, pokemonCards, noResultsFound } =
     useContext(PokemonCardsContext);
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -21,6 +21,11 @@ export function PokemonList() {
     pokemonCards.map((pokemonCardData) => (
       <PokemonCard key={pokemonCardData.id} {...pokemonCardData} />
     ));
+
+  if (noResultsFound)
+    return (
+      <strong> Não foram encontrados resultadas para o termo buscado </strong>
+    );
 
   return (
     <>
