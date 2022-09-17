@@ -16,7 +16,7 @@ interface Images {
 export interface PokemonCardProps {
   id: string;
   name: string;
-  types: Array<string>;
+  types?: Array<string>;
   resistances: Array<Resistences>;
   weaknesses: Array<Weaknesses>;
   images: Images;

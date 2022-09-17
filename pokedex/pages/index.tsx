@@ -1,13 +1,15 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import { PokemonCardsContextProvider } from "../contexts/pokemonCardsContext";
-import PokemonList from "../components/PokemonList";
 import { Navbar } from "../components/common/Navbar";
 
-const Home: NextPage = () => {
-  console.log("Chegaste");
+const PokemonList = dynamic(() => import("../components/PokemonList"), {
+  ssr: false,
+});
 
+const Home: NextPage = () => {
   return (
     <PokemonCardsContextProvider>
       <Head>

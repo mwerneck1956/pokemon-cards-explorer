@@ -1,26 +1,25 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useCallback } from "react";
 import { fetchPokemons, IFetchPokemonParams } from "../endpoints/fetchPokemons";
 import { PokemonCardProps } from "../components/PokemonCard/PokemonCard.interfaces";
-
-export const PokemonCardsContext = createContext<IPokemonCardsContext>({});
-
 interface IPokemonCardsContext {
   pokemonCards: Array<PokemonCardProps>;
   getPokemons: (params: IFetchPokemonParams) => void;
   isLoading: boolean;
 }
-
 interface IPokemonCardsContextProvider {
   children: React.ReactNode;
 }
+
+export const PokemonCardsContext = createContext<IPokemonCardsContext>({});
 
 export function PokemonCardsContextProvider({
   children,
 }: IPokemonCardsContextProvider) {
   const [pokemonCards, setPokemonsCards] = useState<PokemonCardProps[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [requistionError, setRequisitionError] = useState<boolean>(false);
 
-  async function getPokemons(params: IFetchPokemonParams) {
+  const getPokemons = useCallback(async (params: IFetchPokemonParams) => {
     try {
       setIsLoading(true);
 
@@ -32,11 +31,11 @@ export function PokemonCardsContextProvider({
 
       setPokemonsCards(pokemons.data);
     } catch (err) {
-      console.log(err);
+      setRequisitionError(true);
     } finally {
       setIsLoading(false);
     }
-  }
+  }, []);
 
   return (
     <PokemonCardsContext.Provider

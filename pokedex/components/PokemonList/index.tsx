@@ -1,12 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState, useContext } from "react";
-import { BrowserView, MobileView, isMobile } from "react-device-detect";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import { fetchPokemons } from "../../endpoints/fetchPokemons";
-import { PokemonCardProps } from "../PokemonCard/PokemonCard.interfaces";
-import PokemonCard from "../PokemonCard";
+import { BrowserView, MobileView } from "react-device-detect";
+import { Oval as Loader } from "react-loader-spinner";
 import { PokemonCardsContext } from "../../contexts/pokemonCardsContext";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import PokemonCard from "../PokemonCard";
 import styles from "./styles.module.scss";
 
 export function PokemonList() {
@@ -26,21 +24,27 @@ export function PokemonList() {
 
   return (
     <>
-      <BrowserView>
-        <div className={styles["pokemon-list-container"]}>
-          {renderPokemonCards()}
-        </div>
-      </BrowserView>
-      <MobileView>
-        <Carousel
-          showThumbs={false}
-          onChange={(index: number) => setCurrentCardIndex(index)}
-          showIndicators={false}
-          showStatus={false}
-        >
-          {renderPokemonCards()}
-        </Carousel>
-      </MobileView>
+      {isLoading ? (
+        <Loader wrapperClass={styles["pokemon-list-loader"]} />
+      ) : (
+        <>
+          <BrowserView>
+            <div className={styles["pokemon-list-container"]}>
+              {renderPokemonCards()}
+            </div>
+          </BrowserView>
+          <MobileView>
+            <Carousel
+              showThumbs={false}
+              onChange={(index: number) => setCurrentCardIndex(index)}
+              showIndicators={false}
+              showStatus={false}
+            >
+              {renderPokemonCards()}
+            </Carousel>
+          </MobileView>
+        </>
+      )}
     </>
   );
 }
