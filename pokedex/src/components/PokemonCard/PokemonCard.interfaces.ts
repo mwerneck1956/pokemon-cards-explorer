@@ -8,11 +8,11 @@ interface Resistences {
   value: string;
 }
 
-interface Attack {
+export interface Attack {
   name: string;
   cost: string[];
   convertedEnergyCost: number;
-  damage: string;
+  damage?: string;
   text: string;
 }
 

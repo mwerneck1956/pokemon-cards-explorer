@@ -3,6 +3,8 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import Modal from "react-modal";
 import Link from "next/link";
 import PokemonCardImage from "./CardImage";
+import { AttacksModal } from "./AttacksModal";
+
 import styles from "./styles.module.scss";
 
 import { PokemonCardProps } from "./PokemonCard.interfaces";
@@ -89,59 +91,6 @@ export function PokemonCard(props: PokemonCardProps) {
     setIsAttackModalOpen(!isAttackModalOpen);
   };
 
-  const renderAttacksModal = () => {
-    return (
-      <Modal
-        overlayClassName={
-          styles["pokemon-card-container__description__attacks-modal--overlay"]
-        }
-        className={`${styles["pokemon-card-container__description__attacks-modal"]}`}
-        isOpen={isAttackModalOpen}
-        onRequestClose={() => setIsAttackModalOpen(false)}
-      >
-        <header
-          className={
-            styles["pokemon-card-container__description__attacks-modal__header"]
-          }
-        >
-          <h3>Attacks</h3>
-          <button onClick={toggleAttacksModal}>
-            Close <AiOutlineCloseCircle />
-          </button>
-        </header>
-        <ul
-          className={
-            styles[
-              "pokemon-card-container__description__attacks-modal__attacks-list"
-            ]
-          }
-        >
-          {attacks.map((attack, index) => (
-            <li
-              key={attack.name + index}
-              className={
-                styles[
-                  "pokemon-card-container__description__attacks-modal__attack"
-                ]
-              }
-            >
-              <strong>{attack.name}</strong>
-              <span>
-                {attack.cost.map((cost) => (
-                  <span key={cost + name} className={cost.toLowerCase()}>
-                    {cost}
-                  </span>
-                ))}
-              </span>
-              <span>Damage: {attack.damage}</span>
-              <p>Description : {attack.text}</p>
-            </li>
-          ))}
-        </ul>
-      </Modal>
-    );
-  };
-
   const renderContent = (): ReactNode => (
     <li
       className={`${styles["pokemon-card-container"]}  ${
@@ -163,7 +112,12 @@ export function PokemonCard(props: PokemonCardProps) {
         {weaknesses && showWeaknesses && renderPokemonWeaknesses()}
         {resistances && showResistences && renderPokemonResistences()}
         {attacks && showAttacks && renderAttacksModalButton()}
-        {renderAttacksModal()}
+        <AttacksModal
+          name={name}
+          toggleAttacksModal={toggleAttacksModal}
+          attacks={attacks}
+          isAttackModalOpen={isAttackModalOpen}
+        />
       </div>
     </li>
   );
