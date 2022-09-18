@@ -19,6 +19,10 @@
     padding: 10px 5px;
     min-height: 100px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     background: $gray-200;
 
     &__name {
@@ -60,5 +64,75 @@
         font-weight: 500;
       }
     }
+
+    &__open-attacks-modal-btn {
+      background: $blue-water;
+      color: $white-0;
+
+      margin-top: 15px;
+
+      width: 100%;
+      height: 35px;
+      border-radius: 3px;
+
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__attacks-modal--overlay {
+      width: 100vw;
+      height: 100vh;
+      inset: 0px;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__attacks-modal {
+      margin: 15px;
+      background: $white-0;
+      border-radius: 5px;
+
+      &__header {
+        padding: 15px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+          display: flex;
+          align-items: center;
+
+          gap: 5px;
+        }
+      }
+
+      &__attacks-list {
+        padding: 0px;
+      }
+
+      &__attack {
+        margin-top: 5px;
+
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+
+        border-top: 2px solid $gray-700;
+      }
+    }
+  }
+}
+
+.pokemon-card-container--disabled-on-click {
+  &:hover {
+    transform: none;
   }
 }

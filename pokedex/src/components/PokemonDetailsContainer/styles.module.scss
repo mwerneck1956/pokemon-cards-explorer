@@ -1,0 +1,7 @@
+.emphasis-pokemon-card-container {
+  width: 100%;
+
+  @include desktop {
+    width: 380px;
+  }
+}

@@ -4,10 +4,6 @@
   img {
     width: 100%;
     height: auto;
-
-    @include desktop {
-      width: 250px;
-    }
   }
 
   svg {

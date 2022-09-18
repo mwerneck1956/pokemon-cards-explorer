@@ -8,6 +8,14 @@
   @include desktop {
     justify-content: space-between;
   }
+
+  li.pokemon-card {
+    width: 100%;
+
+    @include desktop {
+      width: 270px;
+    }
+  }
 }
 
 .pokemon-list-loader {

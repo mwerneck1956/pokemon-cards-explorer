@@ -8,6 +8,14 @@ interface Resistences {
   value: string;
 }
 
+interface Attack {
+  name: string;
+  cost: string[];
+  convertedEnergyCost: number;
+  damage: string;
+  text: string;
+}
+
 interface Images {
   small: string;
   large: string;
@@ -15,12 +23,15 @@ interface Images {
 
 export interface PokemonCardProps {
   id: string;
+  disableOnClick?: boolean;
   name: string;
   types?: Array<string>;
   resistances: Array<Resistences>;
   weaknesses: Array<Weaknesses>;
+  attacks: Array<Attack>;
   images: Images;
   imageSize: "small" | "large";
   showWeaknesses?: boolean;
   showResistences?: boolean;
+  showAttacks?: boolean;
 }
