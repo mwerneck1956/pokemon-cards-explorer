@@ -10,6 +10,7 @@ interface IPokemonCardsContext {
   getPokemons: (params: IFetchPokemonParams) => void;
   isLoading: boolean;
   noResultsFound: boolean;
+  requistionError: boolean;
 }
 interface IPokemonCardsContextProvider {
   children: React.ReactNode;
@@ -67,6 +68,7 @@ export function PokemonCardsContextProvider({
         pokemonCards,
         isLoading,
         noResultsFound,
+        requistionError,
       }}
     >
       {children}

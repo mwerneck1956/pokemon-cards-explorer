@@ -4,7 +4,7 @@ import PokemonCard from "../index";
 
 describe("Pokemon Card tests", () => {
   beforeEach(() => {
-    render(<PokemonCard {...pokemonDataMock} />);
+    render(<PokemonCard {...pokemonDataMock} imageSize="small" />);
   });
 
   it("Renders the pokemon name and id", () => {

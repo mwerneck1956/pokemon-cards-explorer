@@ -1,0 +1,41 @@
+.alert-container {
+  position: fixed;
+
+  top: 60px;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  padding: 15px;
+  border-radius: 4px;
+
+  width: 100vw;
+  height: 50px;
+
+  svg {
+    width: 25px;
+    height: auto;
+  }
+
+  @include desktop {
+    width: 400px;
+
+    top: 110px;
+    right: 30px;
+  }
+}
+
+.alert-container--error {
+  background-color: $red-error;
+
+  color: $wine-600;
+
+  svg {
+    path {
+      fill: $red-500;
+    }
+  }
+}

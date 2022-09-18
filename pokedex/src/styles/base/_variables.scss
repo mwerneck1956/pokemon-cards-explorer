@@ -6,15 +6,18 @@ $sm: 576px;
 
 //Colors
 $color-primary: #313131;
+$color-font-primary: #313131;
 
 $gray-100: #f3f4f6;
 $gray-200: #e5e7eb;
 $gray-400: #919191;
 $gray-700: #374151;
-
 $dark-gray-700: #4b5563;
 
 $white-0: #fff;
+
+$red-500: #ef5350;
+$wine-600: #5f2120;
 
 $green-grass: #9bcc50;
 $purple-poison: #b97fc9;
@@ -22,7 +25,11 @@ $orange-fire: #fd9d24;
 $yellow-eletric: #eed535;
 $blue-water: #4592c4;
 
+$red-error: #fdeded;
+
 //sizes
-$font-size-title: 2rem;
-$font-size-text-regular: 1rem;
+
 $font-size-text-small: 0.7rem;
+$font-size-text-regular: 1rem;
+$font-size-text-medium: 1.3rem;
+$font-size-title: 2rem;
