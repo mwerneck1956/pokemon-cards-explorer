@@ -1,8 +1,15 @@
-import '../styles/globals.scss'
-import type { AppProps } from 'next/app'
+import "../styles/globals.scss";
+import type { AppProps } from "next/app";
+
+console.log(process.env.NEXT_PUBLIC_API_MOCKING);
+
+if (process.env.NEXT_PUBLIC_API_MOCKING === "true")
+  import("../mocks/msw").then(({ setupMocks }) => {
+    setupMocks();
+  });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

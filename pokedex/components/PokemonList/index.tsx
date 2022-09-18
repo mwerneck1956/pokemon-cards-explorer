@@ -14,7 +14,7 @@ export function PokemonList() {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   useEffect(() => {
-    getPokemons({});
+    getPokemons({ pageSize: 20 });
   }, [getPokemons]);
 
   const renderPokemonCards = () =>
