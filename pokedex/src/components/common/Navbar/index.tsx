@@ -1,9 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import SearchBox from "./components/SearchBox";
 import styles from "./styles.module.scss";
 
 export function Navbar() {
+  const router = useRouter();
+
+  const isSearchBoxVisible = !router.pathname.includes("pokemonDetails");
+
+  const goBackButton = () => (
+    <Link href="/">
+      <button className={styles["navbar__container__goBackButton"]}>
+        <AiOutlineArrowLeft />
+        Voltar
+      </button>
+    </Link>
+  );
+
   return (
     <header className={styles.navbar}>
       <div className={`${styles.navbar__container} container`}>
@@ -13,7 +28,7 @@ export function Navbar() {
               className={
                 styles["navbar__container__logoContainer__img--mobile"]
               }
-              src="images/pokemon-logo-mobile.png"
+              src="/images/pokemon-logo-mobile.png"
               alt="Pokemon Trading Card Game"
             />
           </Link>
@@ -22,12 +37,12 @@ export function Navbar() {
               className={
                 styles["navbar__container__logoContainer__img--desktop"]
               }
-              src="images/pokemon-tcg-logo.svg"
+              src="/images/pokemon-tcg-logo.svg"
               alt="Pokemon Trading Card Game"
             />
           </Link>
         </div>
-        <SearchBox />
+        {isSearchBoxVisible ? <SearchBox /> : goBackButton()}
       </div>
     </header>
   );

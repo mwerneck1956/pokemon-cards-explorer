@@ -37,6 +37,15 @@ export function PokemonList() {
     setIsAlertVisible(requistionError);
   }, [requistionError]);
 
+  if (isLoading) {
+    return (
+      <Loader
+        wrapperClass={styles["pokemon-list-loader"]}
+        ariaLabel="pokemons-list-loader"
+      />
+    );
+  }
+
   if (noResultsFound)
     return (
       <strong className={styles["pokemons-list-no-groups-found"]}>
@@ -46,41 +55,32 @@ export function PokemonList() {
 
   return (
     <>
-      {isLoading ? (
-        <Loader
-          wrapperClass={styles["pokemon-list-loader"]}
-          ariaLabel="pokemons-list-loader"
+      {isAlertVisible && (
+        <Alert
+          type="error"
+          message="Erro interno, tente novamente mais tarde"
+          onClose={() => setIsAlertVisible(false)}
         />
-      ) : (
-        <>
-          {isAlertVisible && (
-            <Alert
-              type="error"
-              message="Erro interno, tente novamente mais tarde"
-              onClose={() => setIsAlertVisible(false)}
-            />
-          )}
-
-          <BrowserView>
-            <ul
-              className={styles["pokemon-list-container"]}
-              aria-label="pokemon-list-container"
-            >
-              {renderPokemonCards()}
-            </ul>
-          </BrowserView>
-          <MobileView>
-            <Carousel
-              showThumbs={false}
-              onChange={(index: number) => setCurrentCardIndex(index)}
-              showIndicators={false}
-              showStatus={false}
-            >
-              {renderPokemonCards()}
-            </Carousel>
-          </MobileView>
-        </>
       )}
+
+      <BrowserView>
+        <ul
+          className={styles["pokemon-list-container"]}
+          aria-label="pokemon-list-container"
+        >
+          {renderPokemonCards()}
+        </ul>
+      </BrowserView>
+      <MobileView>
+        <Carousel
+          showThumbs={false}
+          onChange={(index: number) => setCurrentCardIndex(index)}
+          showIndicators={false}
+          showStatus={false}
+        >
+          {renderPokemonCards()}
+        </Carousel>
+      </MobileView>
     </>
   );
 }

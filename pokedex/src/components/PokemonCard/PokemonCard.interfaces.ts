@@ -21,4 +21,6 @@ export interface PokemonCardProps {
   weaknesses: Array<Weaknesses>;
   images: Images;
   imageSize: "small" | "large";
+  showWeaknesses?: boolean;
+  showResistences?: boolean;
 }

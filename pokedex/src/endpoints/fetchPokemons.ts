@@ -34,3 +34,26 @@ export async function fetchPokemons(
     throw new Error(errMessage);
   }
 }
+
+interface IFetchSpecificPokemon {
+  id: string;
+}
+
+interface IFetchSpecificPokemonResponse {
+  data: PokemonCardProps;
+}
+
+export async function fetchSpecificPokemon(
+  params: IFetchSpecificPokemon
+): Promise<IFetchSpecificPokemonResponse> {
+  try {
+    const response = await pokemontcgApi.get(`/cards/${params.id}`);
+
+    return response.data;
+  } catch (err) {
+    let errMessage = "";
+    if (err instanceof Error) errMessage = err.message;
+
+    throw new Error(errMessage);
+  }
+}

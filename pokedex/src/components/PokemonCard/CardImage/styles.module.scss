@@ -2,8 +2,12 @@
   min-height: 250px;
 
   img {
-    width: 250px;
+    width: 100%;
     height: auto;
+
+    @include desktop {
+      width: 250px;
+    }
   }
 
   svg {

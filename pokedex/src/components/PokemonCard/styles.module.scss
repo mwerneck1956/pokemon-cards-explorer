@@ -46,9 +46,13 @@
 
       li {
         display: flex;
+
+        align-items: center;
         justify-content: center;
 
-        width: 65px;
+        min-width: 65px;
+        width: auto;
+
         height: 24px;
         padding: 4px;
         border-radius: 4px;
