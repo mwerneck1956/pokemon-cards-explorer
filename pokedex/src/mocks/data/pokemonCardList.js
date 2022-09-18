@@ -2,7 +2,7 @@ export const pokemonDataMock = {
   data: [
     {
       id: "pl1-1",
-      name: "Ampharos",
+      name: "Amphaross",
       supertype: "Pokémon",
       subtypes: ["Stage 2"],
       level: "57",

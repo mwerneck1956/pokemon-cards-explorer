@@ -30,13 +30,19 @@ export function PokemonList() {
   return (
     <>
       {isLoading ? (
-        <Loader wrapperClass={styles["pokemon-list-loader"]} />
+        <Loader
+          wrapperClass={styles["pokemon-list-loader"]}
+          ariaLabel="pokemons-list-loader"
+        />
       ) : (
         <>
           <BrowserView>
-            <div className={styles["pokemon-list-container"]}>
+            <ul
+              className={styles["pokemon-list-container"]}
+              aria-label="pokemon-list-container"
+            >
               {renderPokemonCards()}
-            </div>
+            </ul>
           </BrowserView>
           <MobileView>
             <Carousel
@@ -45,7 +51,9 @@ export function PokemonList() {
               showIndicators={false}
               showStatus={false}
             >
-              {renderPokemonCards()}
+              <ul aria-label="pokemon-list-container">
+                {renderPokemonCards()}
+              </ul>
             </Carousel>
           </MobileView>
         </>

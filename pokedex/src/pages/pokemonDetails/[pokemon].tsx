@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Head from "next/head";
 import styles from "./styles.module.scss";
 
 export default function PokemonDetails() {

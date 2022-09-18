@@ -28,7 +28,7 @@ export function PokemonCard(props: PokemonCardProps) {
         className={styles["pokemon-card-container"]}
         aria-label={`${name}-card`}
       >
-        <PokemonCardImage src={images.small} alt={name} />
+        <PokemonCardImage src={images.small} alt={`${name}-card`} />
         <div className={styles["pokemon-card-container__description"]}>
           <small className={styles["pokemon-card-container__description__id"]}>
             {id}
