@@ -46,7 +46,10 @@ export function PokemonDetailsContainer({ pokemonId }: Props) {
           )}
         </div>
       ) : (
-        <Loader wrapperClass={styles["emphasis-pokemon-card-loader"]} />
+        <Loader
+          wrapperClass={styles["emphasis-pokemon-card-loader"]}
+          ariaLabel="pokemon-details-loader"
+        />
       )}
     </div>
   );

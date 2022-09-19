@@ -126,7 +126,7 @@ export function PokemonCard(props: PokemonCardProps) {
   return !disableOnClick ? (
     <Link href={`pokemonDetails/${id}`}>{renderContent()}</Link>
   ) : (
-    <button className="w-100">{renderContent()}</button>
+    <a className="w-100">{renderContent()}</a>
   );
 }
 
