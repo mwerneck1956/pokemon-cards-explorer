@@ -69,7 +69,7 @@ $  yarn test
 
 ### 🧪 Executar os testes E2E (Cypress)
 
-Startar o servidor com o mocks habiltiados
+Startar o servidor em modo de desenvolvimento
 
 ```bash
 $  yarn dev
