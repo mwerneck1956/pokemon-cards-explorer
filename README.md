@@ -2,7 +2,7 @@
 
 ## 🔖 Sobre
 
-> Consiste em uma aplicação que usa a api https://pokemontcg.io/, para obter sobre cartas de pokemo, e contém a listagem das cartas, busca de cartas específicas, e visualização do detalhes das mesmas
+> Consiste em uma aplicação que usa a api https://pokemontcg.io/, para obter cartas de pokemon, e contém a listagem das cartas, busca de cartas específicas, e visualização do detalhes das mesmas
 
 ## Overview do projeto
 
