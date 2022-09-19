@@ -6,6 +6,8 @@ describe("Pokemon listing  test", () => {
       statusCode: 500,
     });
 
+    cy.findByLabelText("teste");
+
     cy.visit("http://localhost:3000");
     cy.get("input").type("Charmander");
   });

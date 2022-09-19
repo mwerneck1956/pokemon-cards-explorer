@@ -30,7 +30,6 @@
     "sass": "^1.54.9"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^8.0.3",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.0.2",
     "@types/node": "18.7.18",
