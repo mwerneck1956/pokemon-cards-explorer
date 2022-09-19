@@ -41,7 +41,7 @@ $ cd src
 
 ### Configurando variáveis de ambiente
 
-Para configurar as variáveis de ambientes necessárias para o funcionamento da aplicação, você deve criar um arquivo chamado `.env.local` (para rodar localmente) com base no modete no arquivo `.env.example`, uma variável de ambiente que utilizamos lo presenno projeto, é a chave da api do pokemonTGC, ela pode ser alterada pela seguinte variável de ambiente.
+Para configurar as variáveis de ambientes necessárias para o funcionamento da aplicação, você deve criar um arquivo chamado `.env.local` (para rodar localmente) com base no modete no arquivo `.env.example`, uma variável de ambiente que é utilizada no projeto, é a chave da api do pokemonTGC, ela pode ser alterada pela seguinte variável de ambiente.
 
 ```bash
 NEXT_PUBLIC_X_API_KEY =
