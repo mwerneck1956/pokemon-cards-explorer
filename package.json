@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "cross-env NEXT_PUBLIC_API_MOCKING=true jest --watch",
-    "dev:test" : "cross-env NEXT_PUBLIC_API_MOCKING=true next dev",
+    "dev:test": "cross-env NEXT_PUBLIC_API_MOCKING=true next dev",
     "cypress": "cross-env NEXT_PUBLIC_API_MOCKING=true cypress"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "sass": "^1.54.9"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.0.2",
     "@types/node": "18.7.18",

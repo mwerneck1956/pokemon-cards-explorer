@@ -12,7 +12,10 @@ export function Navbar() {
 
   const goBackButton = () => (
     <Link href="/">
-      <button className={styles["navbar__container__goBackButton"]}>
+      <button
+        className={styles["navbar__container__goBackButton"]}
+        aria-label="go-back-button"
+      >
         <AiOutlineArrowLeft />
         Go back
       </button>
