@@ -4,6 +4,10 @@
 
 > Consiste em uma aplicação que usa a api https://pokemontcg.io/, para obter sobre cartas de pokemo, e contém a listagem das cartas, busca de cartas específicas, e visualização do detalhes das mesmas
 
+# Overview do projeto
+
+![Mobile](https://drive.google.com/file/d/1wrkGN7Vwz8n2G1bSgJ_wolZi1RJng8DN/view)
+
 ## 💻 Linguagens/Frameworks/Bibliotecas Utilizadas
 
 - 🖥️ NextJS
@@ -61,6 +65,14 @@ $  yarn test
 ```
 
 ### 🧪 Executar os testes E2E (Cypress)
+
+Startar o servidor com o mocks habiltiados
+
+```bash
+$  yarn dev:test
+```
+
+Para abrir o cypress, digite no terminal:
 
 ```bash
 $  yarn cypress
