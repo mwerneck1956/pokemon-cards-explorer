@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align ='center' > Pokemon Cards Explorer </h1>
 
-## Getting Started
+## 🔖 Sobre
 
-First, run the development server:
+> Consiste em uma aplicação que usa a api https://pokemontcg.io/, para obter sobre cartas de pokemo, e contém a listagem das cartas, busca de cartas específicas, e visualização do detalhes das mesmas
+
+## 💻 Linguagens/Frameworks/Bibliotecas Utilizadas
+
+- 🖥️ NextJS
+- ✏️ SASS
+- <img src = 'https://badges.aleen42.com/src/javascript.svg'>
+- <img alt = 'react' src = "https://badges.aleen42.com/src/react.svg">
+- <img alt ='jest' src = 'https://badges.aleen42.com/src/jest_1.svg'>
+- 🖥️ Cypress
+
+## Url da aplicação
+
+A aplicação está hospedada na vercel e pode ser acessada pelo link https://pokedex-theta-wheat.vercel.app/
+
+## Instalação
+
+Para começar processo de desenvolvimento você deve ter em sua máquina as seguintes ferramentas:
+
+- NodeJS
+- GIT
+- Yarn
+
+### Baixando a aplicação
 
 ```bash
-npm run dev
-# or
-yarn dev
+$ git clone https://github.com/mwerneck1956/pokedex
+$ cd src
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configurando variáveis de ambiente
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Para configurar as variáveis de ambientes necessárias para o funcionamento da aplicação, você deve criar um arquivo chamado `.env.local` (para rodar localmente) com base no modete no arquivo `.env.example`, uma variável de ambiente que utilizamos lo presenno projeto, é a chave da api do pokemonTGC, ela pode ser alterada pela seguinte variável de ambiente.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+NEXT_PUBLIC_X_API_KEY =
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Instruções para obter a chave da api : https://pokemontcg.io/
 
-## Learn More
+### Instalando dependências
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+$ yarn install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Executando a aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+$ yarn dev
+```
 
-## Deploy on Vercel
+### 🧪 Executar os testes unitários (Jest+ React testing library)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+$  yarn test
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 🧪 Executar os testes E2E (Cypress)
+
+```bash
+$  yarn cypress
+```
