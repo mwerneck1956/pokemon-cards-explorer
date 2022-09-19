@@ -6,7 +6,7 @@
 
 # Overview do projeto
 
-![Mobile](https://drive.google.com/file/d/1wrkGN7Vwz8n2G1bSgJ_wolZi1RJng8DN/view)
+![Mobile](https://github.com/mwerneck1956/pokedex/blob/master/OverviewPokemonCardsMobile.gif)
 
 ## 💻 Linguagens/Frameworks/Bibliotecas Utilizadas
 
