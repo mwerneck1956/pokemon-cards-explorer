@@ -32,6 +32,9 @@ describe("Pokemon listing  test", () => {
     cy.get("input").clear();
     cy.get("input").type("test");
 
-    cy.get("strong").contains("No results were found for the search term");
+    cy.get("strong").should(
+      "contain.text",
+      "No results were found for the search term."
+    );
   });
 });
