@@ -10,6 +10,12 @@
 
 ![Desktop](https://github.com/mwerneck1956/pokedex/blob/master/OverviewPokemonCardsDesktop.gif)
 
+## Funcionalidades
+
+- [x] Listagem de cartas
+- [x] Busca de cartas
+- [x] Exibição de detalhes da carta (ataques, pontos fracos, resistências, etc..)
+
 ## 💻 Linguagens/Frameworks/Bibliotecas Utilizadas
 
 - 🖥️ NextJS
