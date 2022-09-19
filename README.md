@@ -4,9 +4,11 @@
 
 > Consiste em uma aplicação que usa a api https://pokemontcg.io/, para obter sobre cartas de pokemo, e contém a listagem das cartas, busca de cartas específicas, e visualização do detalhes das mesmas
 
-# Overview do projeto
+## Overview do projeto
 
 ![Mobile](https://github.com/mwerneck1956/pokedex/blob/master/OverviewPokemonCardsMobile.gif)
+
+![Desktop](https://github.com/mwerneck1956/pokedex/blob/master/OverviewPokemonCardsDesktop.gif)
 
 ## 💻 Linguagens/Frameworks/Bibliotecas Utilizadas
 
