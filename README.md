@@ -18,6 +18,7 @@
 - <img alt = 'react' src = "https://badges.aleen42.com/src/react.svg">
 - <img alt ='jest' src = 'https://badges.aleen42.com/src/jest_1.svg'>
 - 🖥️ Cypress
+- ✏️ React testing library
 
 ## Url da aplicação
 
