@@ -30,7 +30,7 @@ export function AttacksModal(props: Props) {
         />
       </header>
       <ul className={styles["attacks-modal__attacks-list"]}>
-        {attacks.map((attack, index) => (
+        {attacks?.map((attack, index) => (
           <li
             key={attack.name + index}
             className={styles["attacks-modal__attack"]}

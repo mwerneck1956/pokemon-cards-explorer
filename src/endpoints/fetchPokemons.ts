@@ -23,6 +23,7 @@ export async function fetchPokemons(
         pageSize: params?.pageSize,
         page: params?.page,
         q: params.q,
+        orderBy: "name",
       },
     });
 
