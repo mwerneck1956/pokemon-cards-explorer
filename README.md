@@ -71,7 +71,7 @@ $  yarn test
 Startar o servidor com o mocks habiltiados
 
 ```bash
-$  yarn dev:test
+$  yarn dev
 ```
 
 Para abrir o cypress, digite no terminal:
