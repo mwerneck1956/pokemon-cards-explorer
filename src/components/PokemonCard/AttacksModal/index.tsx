@@ -24,7 +24,10 @@ export function AttacksModal(props: Props) {
       <header className={styles["attacks-modal__header"]}>
         <h3>Attacks</h3>
 
-        <AiOutlineCloseCircle onClick={toggleAttacksModal} />
+        <AiOutlineCloseCircle
+          onClick={toggleAttacksModal}
+          id="close-attacks-modal"
+        />
       </header>
       <ul className={styles["attacks-modal__attacks-list"]}>
         {attacks.map((attack, index) => (

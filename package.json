@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "cross-env NEXT_PUBLIC_API_MOCKING=true jest --watch"
+    "test": "cross-env NEXT_PUBLIC_API_MOCKING=true jest --watch",
+    "cypress": "cross-env NEXT_PUBLIC_API_MOCKING=true cypress open"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -33,6 +34,7 @@
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "cypress": "^10.8.0",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "jest": "^29.0.3",
