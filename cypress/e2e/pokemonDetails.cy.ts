@@ -1,9 +1,15 @@
+import { pokemonDataMock } from "../../src/mocks/data/pokemonCardList";
+
 describe("Pokemon details flux e2e test", () => {
   it("Tests the pokemon details page", () => {
     cy.viewport("macbook-13");
 
     cy.visit("http://localhost:3000");
-    cy.get("input").type("Charmander");
+
+    cy.intercept("GET", "cards*", {
+      statusCode: 200,
+      body: pokemonDataMock,
+    }).as("fetchPokemons");
 
     cy.get(`[aria-label="Amphaross-card"]`).click();
 

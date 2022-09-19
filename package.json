@@ -9,7 +9,7 @@
     "lint": "next lint",
     "test": "cross-env NEXT_PUBLIC_API_MOCKING=true jest --watch",
     "dev:test": "cross-env NEXT_PUBLIC_API_MOCKING=true next dev",
-    "cypress": "cross-env NEXT_PUBLIC_API_MOCKING=true cypress"
+    "cypress": "cross-env NEXT_PUBLIC_API_MOCKING=true cypress open"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
