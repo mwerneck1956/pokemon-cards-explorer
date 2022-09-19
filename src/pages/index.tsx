@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <PokemonCardsContextProvider>
       <Head>
-        <title> Pokedex </title>
+        <title> Pokemon Cards Explorer </title>
         <meta name="description" content="A simple pokedex app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
