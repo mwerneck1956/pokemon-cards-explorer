@@ -11,4 +11,7 @@ module.exports = {
     includePaths: [path.join(__dirname, "src/styles")],
     prependData: `@import "base/base.scss";`,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
