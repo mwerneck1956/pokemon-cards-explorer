@@ -23,6 +23,7 @@ export function PokemonList() {
   const renderPokemonCards = () =>
     pokemonCards.map((pokemonCardData) => (
       <PokemonCard
+        additionalClassName={styles["pokemon-list-container__pokemon-card"]}
         key={pokemonCardData.id}
         {...pokemonCardData}
         imageSize="small"

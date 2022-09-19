@@ -9,6 +9,14 @@
     justify-content: space-between;
   }
 
+  &__pokemon-card {
+    @include desktop {
+      img {
+        height: 330px;
+      }
+    }
+  }
+
   li.pokemon-card {
     width: 100%;
 
