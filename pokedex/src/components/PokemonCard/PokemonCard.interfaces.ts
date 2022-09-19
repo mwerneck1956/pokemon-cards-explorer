@@ -34,4 +34,5 @@ export interface PokemonCardProps {
   showWeaknesses?: boolean;
   showResistences?: boolean;
   showAttacks?: boolean;
+  additionalClassName?: string;
 }

@@ -49,7 +49,7 @@ export function PokemonList() {
   if (noResultsFound)
     return (
       <strong className={styles["pokemons-list-no-groups-found"]}>
-        Não foram encontrados resultadas para o termo buscado{" "}
+        No results were found for the search term.
       </strong>
     );
 
@@ -58,7 +58,7 @@ export function PokemonList() {
       {isAlertVisible && (
         <Alert
           type="error"
-          message="Erro interno, tente novamente mais tarde"
+          message="Internal error, try again later"
           onClose={() => setIsAlertVisible(false)}
         />
       )}

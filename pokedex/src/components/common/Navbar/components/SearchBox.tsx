@@ -27,7 +27,10 @@ export default function SearchBox() {
 
   return (
     <div className={styles["search-container"]}>
-      <input onChange={onInputChange} placeholder="Digite o nome do pokemon" />
+      <input
+        onChange={onInputChange}
+        placeholder="Type the name of the pokemon"
+      />
       <FiSearch />
     </div>
   );

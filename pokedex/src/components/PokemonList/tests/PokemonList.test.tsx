@@ -70,9 +70,7 @@ describe("PokemonListing tests", () => {
 
     render(<PokemonList />, { wrapper });
     expect(
-      await screen.findByText(
-        /Não foram encontrados resultadas para o termo buscado/i
-      )
+      await screen.findByText(/No results were found for the search term./i)
     ).toBeInTheDocument();
   });
 
@@ -87,14 +85,10 @@ describe("PokemonListing tests", () => {
 
     render(<PokemonList />, { wrapper });
 
-    await waitFor(() =>
-      screen.findByText(/Erro interno, tente novamente mais tarde/i)
-    );
-
     expect(
-      await screen.findByText(/Erro interno, tente novamente mais tarde/i, {
+      await screen.findByText(/Internal error, try again later/i, {
         exact: false,
       })
-    );
+    ).toBeInTheDocument();
   });
 });

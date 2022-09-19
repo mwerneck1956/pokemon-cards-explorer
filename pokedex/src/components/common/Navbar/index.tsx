@@ -14,7 +14,7 @@ export function Navbar() {
     <Link href="/">
       <button className={styles["navbar__container__goBackButton"]}>
         <AiOutlineArrowLeft />
-        Voltar
+        Go back
       </button>
     </Link>
   );

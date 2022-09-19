@@ -12,6 +12,7 @@ import { PokemonCardProps } from "./PokemonCard.interfaces";
 export function PokemonCard(props: PokemonCardProps) {
   const {
     attacks,
+    additionalClassName,
     id,
     images,
     name,
@@ -42,7 +43,7 @@ export function PokemonCard(props: PokemonCardProps) {
 
   const renderPokemonResistences = (): ReactNode => (
     <>
-      <strong> Resistências </strong>
+      <strong> Resistences </strong>
       <ul
         aria-label="pokemon-resistances"
         className={styles["pokemon-card-container__description__types"]}
@@ -60,7 +61,7 @@ export function PokemonCard(props: PokemonCardProps) {
 
   const renderPokemonWeaknesses = (): ReactNode => (
     <>
-      <strong> Fraquezas </strong>
+      <strong> Weaknesses </strong>
       <ul
         aria-label="pokemon-weaknesses"
         className={styles["pokemon-card-container__description__types"]}
@@ -83,7 +84,7 @@ export function PokemonCard(props: PokemonCardProps) {
       }
       onClick={() => setIsAttackModalOpen(true)}
     >
-      Ver ataques
+      See attacks
     </button>
   );
 
@@ -93,7 +94,7 @@ export function PokemonCard(props: PokemonCardProps) {
 
   const renderContent = (): ReactNode => (
     <li
-      className={`${styles["pokemon-card-container"]}  ${
+      className={`${additionalClassName} ${styles["pokemon-card-container"]}  ${
         disableOnClick
           ? styles["pokemon-card-container--disabled-on-click"]
           : ""
@@ -125,7 +126,7 @@ export function PokemonCard(props: PokemonCardProps) {
   return !disableOnClick ? (
     <Link href={`pokemonDetails/${id}`}>{renderContent()}</Link>
   ) : (
-    <button>{renderContent()}</button>
+    <button className="w-100">{renderContent()}</button>
   );
 }
 

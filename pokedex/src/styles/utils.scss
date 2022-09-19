@@ -1,0 +1,62 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 90vw;
+  max-width: 90vw;
+}
+
+@include desktop {
+  .container {
+    width: 1170px;
+  }
+}
+
+.d-flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.pokemon-card {
+  background: $gray-400;
+  color: $white-0;
+}
+
+.pokemon-card-type {
+  background: $gray-400;
+  color: $white-0;
+}
+
+.lightning {
+  background: $yellow-eletric;
+  color: $color-primary;
+}
+
+.fire {
+  background: $orange-fire;
+  color: $white-0;
+}
+
+.grass {
+  background: $green-grass;
+  color: $white-0;
+}
+
+.poison {
+  background: $purple-poison;
+  color: $white-0;
+}
+
+.water {
+  background: $blue-water;
+  color: $white-0;
+}

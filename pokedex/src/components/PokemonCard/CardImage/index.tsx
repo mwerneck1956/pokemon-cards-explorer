@@ -16,6 +16,7 @@ const Loader = () => (
     viewBox="0 0 250 350"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
+    className={styles["content-loader"]}
   >
     <rect x="0" y="0" rx="0" ry="0" width="250" height="350" />
   </ContentLoader>
