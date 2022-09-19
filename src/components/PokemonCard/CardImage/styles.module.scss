@@ -1,0 +1,21 @@
+.pokemon-card-img__container {
+  min-height: 250px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    rect {
+      width: 100%;
+    }
+  }
+}
+
+.content-loader {
+  width: 100%;
+}
